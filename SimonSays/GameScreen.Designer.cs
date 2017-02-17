@@ -30,59 +30,82 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.greenButton = new System.Windows.Forms.Button();
+            this.redButton = new System.Windows.Forms.Button();
+            this.yellowButton = new System.Windows.Forms.Button();
+            this.blueButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.currentScoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // greenButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(78, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.greenButton.BackColor = System.Drawing.Color.Green;
+            this.greenButton.ForeColor = System.Drawing.Color.Black;
+            this.greenButton.Location = new System.Drawing.Point(78, 85);
+            this.greenButton.Name = "greenButton";
+            this.greenButton.Size = new System.Drawing.Size(100, 100);
+            this.greenButton.TabIndex = 0;
+            this.greenButton.UseVisualStyleBackColor = false;
+            this.greenButton.Click += new System.EventHandler(this.greenButton_Click);
             // 
-            // button2
+            // redButton
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.Location = new System.Drawing.Point(223, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 100);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.redButton.BackColor = System.Drawing.Color.DarkRed;
+            this.redButton.Location = new System.Drawing.Point(223, 85);
+            this.redButton.Name = "redButton";
+            this.redButton.Size = new System.Drawing.Size(100, 100);
+            this.redButton.TabIndex = 1;
+            this.redButton.UseVisualStyleBackColor = false;
+            this.redButton.Click += new System.EventHandler(this.redButton_Click);
             // 
-            // button3
+            // yellowButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Goldenrod;
-            this.button3.Location = new System.Drawing.Point(78, 220);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 100);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.yellowButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.yellowButton.Location = new System.Drawing.Point(78, 234);
+            this.yellowButton.Name = "yellowButton";
+            this.yellowButton.Size = new System.Drawing.Size(100, 100);
+            this.yellowButton.TabIndex = 2;
+            this.yellowButton.UseVisualStyleBackColor = false;
+            this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
             // 
-            // button4
+            // blueButton
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkBlue;
-            this.button4.Location = new System.Drawing.Point(223, 220);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 100);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.blueButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.blueButton.Location = new System.Drawing.Point(223, 234);
+            this.blueButton.Name = "blueButton";
+            this.blueButton.Size = new System.Drawing.Size(100, 100);
+            this.blueButton.TabIndex = 3;
+            this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 16;
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Trajan Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.Color.Snow;
+            this.scoreLabel.Location = new System.Drawing.Point(169, 188);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(73, 24);
+            this.scoreLabel.TabIndex = 4;
+            this.scoreLabel.Text = "Score";
+            // 
+            // currentScoreLabel
+            // 
+            this.currentScoreLabel.AutoSize = true;
+            this.currentScoreLabel.Font = new System.Drawing.Font("Trajan Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentScoreLabel.ForeColor = System.Drawing.Color.Snow;
+            this.currentScoreLabel.Location = new System.Drawing.Point(193, 212);
+            this.currentScoreLabel.Name = "currentScoreLabel";
+            this.currentScoreLabel.Size = new System.Drawing.Size(0, 24);
+            this.currentScoreLabel.TabIndex = 5;
             // 
             // GameScreen
             // 
@@ -90,24 +113,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.currentScoreLabel);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.blueButton);
+            this.Controls.Add(this.yellowButton);
+            this.Controls.Add(this.redButton);
+            this.Controls.Add(this.greenButton);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(400, 400);
             this.Load += new System.EventHandler(this.GameScreen_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button greenButton;
+        private System.Windows.Forms.Button redButton;
+        private System.Windows.Forms.Button yellowButton;
+        private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label currentScoreLabel;
     }
 }

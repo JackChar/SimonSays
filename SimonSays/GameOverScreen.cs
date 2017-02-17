@@ -15,14 +15,17 @@ namespace SimonSays
         public GameOverScreen()
         {
             InitializeComponent();
-            scoreLabel.Text = "";
+            //Display Score
+            scoreLabel.Text = Convert.ToString(Form1.o -1);
         }         
 
         private void mainScreenButton_Click(object sender, EventArgs e)
         {
+            //Return score to 0
+            Form1.o = 0;
+            //Return to Main menu
             Form f = this.FindForm();
             f.Controls.Remove(this);
-
             MainScreen ms = new MainScreen();
             f.Controls.Add(ms);
         }

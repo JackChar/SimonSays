@@ -39,7 +39,7 @@
             this.gameOver.AutoSize = true;
             this.gameOver.Font = new System.Drawing.Font("Trajan Pro", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameOver.ForeColor = System.Drawing.SystemColors.Window;
-            this.gameOver.Location = new System.Drawing.Point(76, 80);
+            this.gameOver.Location = new System.Drawing.Point(85, 87);
             this.gameOver.Name = "gameOver";
             this.gameOver.Size = new System.Drawing.Size(234, 44);
             this.gameOver.TabIndex = 0;
@@ -50,7 +50,7 @@
             this.highScoreLabel.AutoSize = true;
             this.highScoreLabel.Font = new System.Drawing.Font("Trajan Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highScoreLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.highScoreLabel.Location = new System.Drawing.Point(102, 166);
+            this.highScoreLabel.Location = new System.Drawing.Point(110, 175);
             this.highScoreLabel.Name = "highScoreLabel";
             this.highScoreLabel.Size = new System.Drawing.Size(187, 26);
             this.highScoreLabel.TabIndex = 1;
@@ -58,9 +58,10 @@
             // 
             // mainScreenButton
             // 
-            this.mainScreenButton.Location = new System.Drawing.Point(152, 259);
+            this.mainScreenButton.Font = new System.Drawing.Font("Trajan Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainScreenButton.Location = new System.Drawing.Point(146, 274);
             this.mainScreenButton.Name = "mainScreenButton";
-            this.mainScreenButton.Size = new System.Drawing.Size(75, 23);
+            this.mainScreenButton.Size = new System.Drawing.Size(107, 23);
             this.mainScreenButton.TabIndex = 2;
             this.mainScreenButton.Text = "Main Screen";
             this.mainScreenButton.UseVisualStyleBackColor = true;
@@ -71,7 +72,7 @@
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Trajan Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.scoreLabel.Location = new System.Drawing.Point(102, 192);
+            this.scoreLabel.Location = new System.Drawing.Point(192, 214);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(0, 26);
             this.scoreLabel.TabIndex = 3;

@@ -19,15 +19,16 @@ namespace SimonSays
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
+            //leaves main screenopens new game 
             Form f = this.FindForm();
             f.Controls.Remove(this);
-
             GameScreen gs = new GameScreen();
             f.Controls.Add(gs);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //Close the application
             Application.Exit();
         }
     }
